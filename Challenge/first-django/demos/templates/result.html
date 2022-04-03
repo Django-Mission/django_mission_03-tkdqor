@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1차 Challenge 결과 페이지</title>
+</head>
+<body>
+    <h1>로또 번호 추출기</h1>
+
+    <p>생성된 로또 번호입니다.</p>
+    <p>게임 수 : {{ game_count }}</p>
+
+    <!-- for문으로 로또 번호 추출 -->
+    <!-- 입력된 게임 개수 만큼 반복해서 lotto_list 출력 -->
+    <p>로또 번호 : [
+    {% for count in counts %}
+        {{ lotto_lists }}
+    {% endfor %}
+    ]
+    </p>
+
+    <a href="/lotto/">돌아가기</a>
+</body>
+</html>
