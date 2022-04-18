@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'demos',
+    'support',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Media File이 저장될 경로
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# MEDIA_ROOT에 저장된 File이 제공될 base URL
+MEDIA_URL = '/media/'

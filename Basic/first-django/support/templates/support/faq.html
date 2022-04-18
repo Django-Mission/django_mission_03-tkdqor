@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+<body>
+    <h1>자주 묻는 질문</h1>
+    {% for faq in faqs %}  
+
+    <!-- 카테고리가 일반일 때 -->
+    {% if faq.category == "NORMAL" %}
+        <!-- db값이 아닌 display값을 출력하기 위해 get_필드명_display 함수 사용 -->
+        <p style="font-size: 20px; font-weight: 700;">{{ faq.get_category_display }}</p>    
+        <p style="font-size: 15px; font-weight: 700;">Q : {{ faq.question }}</p>
+        <p style="font-size: 15px;">A : {{ faq.answer }}</p>   
+    {% elif faq.category == "ACCOUNT" %}
+        <p style="font-size: 20px; font-weight: 700;">{{ faq.get_category_display }}</p>    
+        <p style="font-size: 15px; font-weight: 700;">Q : {{ faq.question }}</p>
+        <p style="font-size: 15px;">A : {{ faq.answer }}</p>  
+    {% else %}
+        <p style="font-size: 20px; font-weight: 700;">{{ faq.get_category_display }}</p>    
+        <p style="font-size: 15px; font-weight: 700;">Q : {{ faq.question }}</p>
+        <p style="font-size: 15px;">A : {{ faq.answer }}</p>                  
+    {% endif %}    
+    {% endfor %}
+</body>
+</html>

@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from demos import views
+from support.views import inquiry
+from django.conf import settings    # 이미지 파일 업로드를 위한 settings import
+from django.conf.urls.static import static  # 이미지 파일 업로드를 위한 static import
 
 urlpatterns = [
     # admin 페이지 URL
@@ -24,4 +27,9 @@ urlpatterns = [
     path('lotto/', views.lotto, name='lotto'),
     # 로또 번호 추출기 결과 페이지 URL
     path('lotto/result/', views.result, name='result'),
-]
+
+    # 2차 Challenge 미션 URL
+    path('inquiry/', inquiry, name='inquiry'),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# 이미지 serving를 위해 settings에서 설정한 MEDIA_URL로 요청이 들어올 경우, MEDIA_ROOT 내부에서 검색 후 HTTP Response로 응답

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+<!-- title block -->
+{% block title %}인덱스{% endblock %}
+
+<!-- content block -->
+{% block content %}
+<h1>인덱스 화면</h1>
+    <ul>
+        <li><a href="{% url 'posts:post-list' %}">게시글 목록</a></li>
+    </ul>
+{% endblock %}

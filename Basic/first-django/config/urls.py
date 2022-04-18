@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from demos.views import calculator, lotto
+from support.views import faq
 
 urlpatterns = [
     # 어드민 페이지 URL
@@ -24,4 +25,7 @@ urlpatterns = [
     path('calculator/', calculator, name='calculator'),
     # 로또 번호 추출기 URL
     path('lotto/', lotto, name='lotto'),
+
+    # 2차 Basic 미션 FAQ 페이지 URL
+    path('faq/', faq, name='faq'),
 ]
