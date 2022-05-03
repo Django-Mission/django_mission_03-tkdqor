@@ -6,6 +6,17 @@
 <!-- content block -->
 {% block content %}
 <h1>Post 목록 화면</h1>
+
+{% for post in post_list %}
+    <div>
+        {{ post.id }}
+        {{ post.image }}
+        {{ post.content }}
+        {{ post.created_at }}
+        {{ post.writer }}
+    </div>
+{% endfor %}
+
 {% endblock %}
 
 

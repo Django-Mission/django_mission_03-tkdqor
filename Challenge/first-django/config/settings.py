@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'demos',
     'support',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'UTC'
 
@@ -130,3 +131,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 # MEDIA_ROOT에 저장된 File이 제공될 base URL
 MEDIA_URL = '/media/'
+
+
+# User 모델 커스텀
+AUTH_USER_MODEL = 'users.User'

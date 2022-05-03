@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings      # settings.py 값들 가져오기
+from django.conf.urls.static import static
 from django.urls import path, include
 from posts.views import index, url_view, url_parameter_view, function_view, class_view
 
@@ -26,6 +28,17 @@ urlpatterns = [
 
     # index 페이지 url
     path('', index, name='index'),
+
     # posts 앱으로 연결 
     path('posts/', include('posts.urls')),
+
+    # django debug toolbar URL 설정
+    path('__debug__/', include('debug_toolbar.urls')),
+
+    # accounts 앱으로 연결
+    path('accounts/', include('accounts.urls')),
 ]
+
+
+# 이미지 파일 url 설정
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

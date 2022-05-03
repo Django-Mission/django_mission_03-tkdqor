@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from demos.views import calculator, lotto
 from support.views import faq
+from django.conf import settings    # 이미지 파일 업로드를 위한 settings import
+from django.conf.urls.static import static  # 이미지 파일 업로드를 위한 static import
 
 urlpatterns = [
     # 어드민 페이지 URL
@@ -28,4 +30,5 @@ urlpatterns = [
 
     # 2차 Basic 미션 FAQ 페이지 URL
     path('faq/', faq, name='faq'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# 이미지 serving를 위해 settings에서 설정한 MEDIA_URL로 요청이 들어올 경우, MEDIA_ROOT 내부에서 검색 후 HTTP Response로 응답
