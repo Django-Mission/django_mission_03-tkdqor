@@ -35,7 +35,7 @@
 
 
 - **고객센터(support) 앱의 Inquiry 모델 관련 이미지**
-<img width="989" alt="image" src="https://user-images.githubusercontent.com/95380638/166414561-bf3de14a-360e-44ca-9895-61547b6bae97.png">
+<img width="1016" alt="image" src="https://user-images.githubusercontent.com/95380638/166415974-9754f2a7-f301-4c5f-96fd-6783625fe3fc.png">
 
 <img width="1016" alt="image" src="https://user-images.githubusercontent.com/95380638/166414774-5f2724d6-ed16-4d72-97fa-6056da07c84d.png">
 
