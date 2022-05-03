@@ -46,7 +46,7 @@
 * * *
 
 ## :pushpin: 오류 해결 사항
-- 사용자 모델 User에 phone 필드를 추가하기 위해, support App 내부 models.py에서 User 모델을 커스텀하기 위해 AbstractUser 클래스를 상속받아 코드를 입력했으나,
+- 사용자 모델 User에 phone 필드를 추가하기 위해, support App 내부 models.py에서 AbstractUser 클래스를 상속받아 User 모델 커스텀 코드를 입력했으나,
 ```terminal
 ValueError: Related model 'support.user' cannot be resolved
 ```
