@@ -41,6 +41,8 @@
 
 <img width="1424" alt="image" src="https://user-images.githubusercontent.com/95380638/166414855-9e5d2a1f-a79d-4b6a-b67a-9851a7aeee63.png">
 
+<img width="1408" alt="image" src="https://user-images.githubusercontent.com/95380638/166416143-f8a4f3eb-3376-4f92-8541-173949c59fc8.png">
+
 * * *
 
 ## :pushpin: 오류 해결 사항
